@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            background-color: aqua;
+        font-family: 'Courier New', Courier, monospace;
+        }
+
+        .topnav{
+            overflow: hidden;
+            background-color: black;
+        }
+
+        a{
+            float: left;
+            color: yellow;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        a:hover{
+            background-color: lightblue;
+        }
+
+        .active{
+            background: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="topnav">
+<a class="active" href="#home">home</a>
+<a  href="#about">about</a>
+<a  href="#gallery">gallery</a>
+<a  href="#contact us">contact us</a>
+</div>
+
+<section>
+    <img class="myslides" src="https://tse3.mm.bing.net/th/id/OIP.44Bf_Tz2SFTgCSFBkJwiRAHaEK?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" style="height: 500px;">
+    <img class="myslides" src="https://images.alphacoders.com/109/thumb-1920-1093551.jpg" style="height: 500px;">
+     <img class="myslides" src="https://tse1.mm.bing.net/th/id/OIP.todzFiCdppVXoPnT0HgwdAHaEK?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" style="height: 500px;">
+    </section>
+
+    <span style="font-size:40px;">
+
+<center>Welcome all to this website</center>
+
+</span><br>
+
+<section class="section section-dark">
+
+<h2>Section One</h2>
+
+<p>Web development is the work involved in developing a Web site for the Internet (World Wide Web) or an intranet (a private network).</p>
+
+</section>
+
+<div class="pimg3">
+
+<div class="ptext">
+
+<span class="border trans">Image Two Text</span>
+
+</div>
+
+</div>
+
+<div class="footer">
+<p>contact number : 913331615553</p>
+<p>email : lavinrajwani@gmail.com</p>
+<p>copyright &copy; lavin rajwani | all rights reserved </p>
+</div>
+
+    <script>
+        var myIndex=0
+        carousal()
+
+        function carousal(){
+            var i 
+            var x= document.getElementsByClassName("myslides")
+            for (i=0;i < x.length;i++){
+                 x[i].style.display="none"
+            }
+
+            myIndex++
+            if (myIndex>x.length){
+                myIndex=1
+            }
+
+        x[myIndex-1].style.display="block"
+        setTimeout(carousal,3000)
+             }
+    </script>
+</body>
+</html>
